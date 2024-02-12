@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "\"Back end application for microservices-admin\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/shivrajkhetri7/microservices-admin.git\""
+  },
+  "keywords": [
+    "MICRO",
+    "ADMIN"
+  ],
+  "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.2"
+  }
+}
