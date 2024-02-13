@@ -32,3 +32,8 @@ This Application Monitors User Login || User Sign Up || User List
 
 
 <img width="8576" alt="FigJam basics (1)-min-min" src="https://github.com/shivrajkhetri7/microservices-admin/assets/59004184/1937bbd1-4aac-4cd9-abc2-3ae76b76734c">
+
+## Client Deployed URL 
+
+<a herf='https://microservices-admin-1ile35ebk-shivrajkhetri7s-projects.vercel.app/' target="blank"> microservices-admin </a>
+
