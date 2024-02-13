@@ -3,22 +3,22 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from 'react-router-dom';
-import Login from "../component/Login/Login";
-import SignUp from "../component/Login/SignUp";
 import { Sample } from "../component/sampleFile/sample";
+import LoginPage from "../pages/Login";
+import Register from "../pages/Register";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const router = createBrowserRouter([
     {
-        path:'/login',
-        element:<Login/>
-    },
-    {
-        path:'/signup',
-        element:<SignUp/>
+        path:'/register',
+        element:<Register/>
     },
     {
         path:"/",
-        element:<Sample/>
+        element:<LoginPage/>
+    },{
+        path:"/reset-password",
+        element:<ForgotPassword/>
     }
 ])
 
