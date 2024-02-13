@@ -7,7 +7,7 @@
     "test": "npm run test",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "pord" : "concurrently \"npm install\" \"node server.js\""
+    "prod" : "node server.js"
 
   },
   "repository": {
