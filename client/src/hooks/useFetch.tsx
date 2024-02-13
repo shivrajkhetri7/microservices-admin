@@ -6,7 +6,11 @@ import React,{useState,useEffect} from "react";
  * @param props {URL}
  * @returns 
  */
-const useFecth=(props)=>{
+
+interface UseFecthInterface {
+    URL:string
+}
+export const useFecth=(props:UseFecthInterface)=>{
     const {URL} = props;
     const [loading ,setLoading] = useState<boolean>(true);
     const [data ,setData]= useState<any>();
