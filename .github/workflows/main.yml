@@ -1,0 +1,50 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - developement
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: |
+        cd server
+        npm install
+        cd ../client
+        npm install
+
+    - name: Build and Test Node.js
+      run: |
+        cd server
+        npm test
+
+    - name: Build React App
+      run: |
+        cd client
+        npm test
+        npm run build
+
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #   - name: Deploy to Server
+  #     run: |
+  #       # Add your deployment script or commands here
+  #       # Example: deploy to a server using SCP, SSH, or any deployment tool
