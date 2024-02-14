@@ -20,11 +20,13 @@
   "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.2",
     "express": "^4.18.2",
     "joi": "^17.12.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.1.2",
     "nodemon": "^3.0.3",
     "uuid": "^9.0.1"

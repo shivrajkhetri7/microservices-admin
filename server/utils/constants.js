@@ -3,8 +3,8 @@ module.exports = {
     USERS: {
       USER_ID_REQUIRED: "User Id is required.",
       USER_LOGIN_SUCCESS: "User login successfully.",
-      NOT_FOUND: "Sorry we could not find this user.",
-      EMAIL_ALREADY_EXISTS: "A user with this email address already exists.",
+      NOT_FOUND: "Sorry we could not find userwith this email",
+      EMAIL_ALREADY_EXISTS: "A user with this email address already exists",
       EMAIL_ALREADY_VERIFIED: "This email has already verified.",
       EMAIL_RESENT: "Email resent successfully.",
       USER_VERIFIED_SUCCESSFULLY: "User verified successfully.",
@@ -17,15 +17,16 @@ module.exports = {
       FAILED_TO_CREATE_USER: "Failed to create user.",
     },
     AUTH: {
-      INCORRECT_PASSWORD: "Password is incorrect.",
+      INCORRECT_PASSWORD: "Password is incorrect",
       NO_PERMISSION_AVAILABLE: "No permissions available.",
     },
     SIGNUP: {
-      SIGNUP_COMPLETED: "signup successfully.",
-      FAILED_TO_CREATE_SIGNUP: "Signup failed.",
+      SIGNUP_COMPLETED: "Heyyy congracts, You have signed-up successfully.",
+      FAILED_TO_CREATE_SIGNUP: "ooops, Signup failed.",
       OTP_VERIFIED: "Valid Otp.",
-      OTP_EXPIRED: "Otp has expired.",
-      OTP_INCORRECT: "Incorrect otp.",
+      OTP_EXPIRED: "ohhh, your Otp has expired.",
+      OTP_INCORRECT:
+        "ooops, your otp is Incorrect please try again with correct one.",
       EMAIL_SENT_SUCCESS: `OTP has been successfully sent to the email address: `,
       EMAIL_NOT_FOUND: "Email not found",
       DOMAIN_NAME_EXIST: "Domain name already exist.",
