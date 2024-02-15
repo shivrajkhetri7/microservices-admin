@@ -17,7 +17,7 @@ const signUpController = catchAsyncError(async (req, res) => {
   let payload = req.body;
   const user = await userSchema.findOne({ email: payload?.email });
   if (user) {
-    res.status(constants.CODES.BAD_REQUEST).json({
+    return res.status(constants.CODES.BAD_REQUEST).json({
       status: false,
       message: `${constants.MESSAGES.USERS.EMAIL_ALREADY_EXISTS}  :${payload?.email}`,
     });
@@ -66,12 +66,21 @@ const signInController = catchAsyncError(async (req, res) => {
     });
   }
 
-  response.password = null;
-  response.token = await encode({ userId: response.userId, email });
+  const token = await encode({ userId: response.userId, email });
+
+  const responseObject = {
+    _id: response._id,
+    userId: response.userId,
+    firstname: response.firstname,
+    lastname: response.lastname,
+    email: response.email,
+    token: token,
+  };
+
   return res.status(constants.CODES.SUCCESS).json({
     success: true,
     message: constants.MESSAGES.USERS.USER_LOGIN_SUCCESS,
-    data: response,
+    data: responseObject,
   });
 });
 

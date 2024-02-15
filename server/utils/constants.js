@@ -51,6 +51,8 @@ module.exports = {
       VALID_LICENSE_NOT_EXIST: "Valid license does not exist.",
       STATUS_UPDATED: "Status updated successfully.",
       UNAUTHORIZED_ACCESS: "Unauthorized access",
+      TOKEN_REQUIRED: "token required!",
+      INVALID_TOKEN: "invalid token",
       FAILED_TO_GET_DETAILS: "Failed to get details.",
       PERMISSION_UPDATED: "Permission Updated successfully.",
     },

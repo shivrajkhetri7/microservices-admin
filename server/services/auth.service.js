@@ -25,7 +25,7 @@ exports.decode = (token) => {
     };
   }
 
-  return params;
+  return params.params;
 };
 
 exports.encodeWithExpiry = (params) => {
