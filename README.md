@@ -28,4 +28,4 @@ This Application is about to Expense tracking
 
 ## USER FLOW DIGRAM
 
-![Uploading Expense Managment Application.png…]()
+<img width="2103" alt="Expense Managment Application" src="https://github.com/shivrajkhetri7/microservices-admin/assets/59004184/5c92a8e6-f644-431a-9e32-425b19f135b4">
