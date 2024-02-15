@@ -1,10 +1,7 @@
 # microservices-admin
-This Application Monitors User Login || User Sign Up || User List 
+This Application is about to Expense tracking  
 
-
-### client 
-#  Application to Execution 
-
+# client execution steps
 -> Step 1 : npm install 
 
 -> Step 2 : npm run test 
@@ -15,11 +12,7 @@ This Application Monitors User Login || User Sign Up || User List
 // PROD Envirnment
 -> npm strat
 
-
-### Server
-
-# Application to Execution
-
+# Server execution steps
 -> Step 1 : npm install 
 
 // Devlopment Envirnment 
@@ -33,7 +26,6 @@ This Application Monitors User Login || User Sign Up || User List
 
 <img width="8576" alt="FigJam basics (1)-min-min" src="https://github.com/shivrajkhetri7/microservices-admin/assets/59004184/1937bbd1-4aac-4cd9-abc2-3ae76b76734c">
 
-## Client Deployed URL 
+## USER FLOW DIGRAM
 
-<a herf='https://microservices-admin-1ile35ebk-shivrajkhetri7s-projects.vercel.app/' target="blank"> microservices-admin </a>
-
+![Uploading Expense Managment Application.png…]()
