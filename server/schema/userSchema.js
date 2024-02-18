@@ -26,6 +26,18 @@ const User = mongoose.Schema(
       type: String,
       require: true,
     },
+    totalIncome:{
+      type: Number,
+    },
+    incomeType:{
+      type:String,
+      enum:["fixedIncome","variableIncome"],
+      default:"fixedIncome"
+    },
+    thresholdPercent:{
+      type:Number,
+      default: 50
+    },
     createdAt: {
       default: Date.now,
       type: Date,
