@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require("uuid");
 const bcrypt = require("bcrypt");
 const constants = require("../../utils/constants");
 
@@ -6,11 +5,7 @@ const { signUpValidator } = require("../../validators/signup-validator");
 const userSchema = require("../../schema/userSchema");
 const catchAsyncError = require("../../middlewares/catchAsyncErrors");
 const { encode, decode } = require("../../services/auth.service");
-
-const generateUserId = async () => {
-  const uniqueId = uuidv4();
-  return uniqueId;
-};
+const { generateUserId } = require("../../utils/utils");
 
 const signUpController = catchAsyncError(async (req, res) => {
   const userId = await generateUserId();
