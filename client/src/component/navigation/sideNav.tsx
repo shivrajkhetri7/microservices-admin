@@ -16,7 +16,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import { truncate } from 'fs';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
 
 const drawerWidth = 240;
 
@@ -24,6 +26,7 @@ interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
 
+// eslint-disable-next-line
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
@@ -72,7 +75,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }));
 
-
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     width: drawerWidth,
@@ -105,6 +107,7 @@ export const SideNav = () => {
           </IconButton>
         </DrawerHeader>
         <Divider />
+        {/* Dashbord Icons */}
         <List>
           <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
             <ListItemButton
@@ -113,7 +116,6 @@ export const SideNav = () => {
                 justifyContent: open ? 'initial' : 'center',
                 px: 2.5,
               }}
-
             >
               <ListItemIcon
                 sx={{
@@ -128,7 +130,76 @@ export const SideNav = () => {
             </ListItemButton>
           </ListItem>
         </List>
-
+        {/* Expense Icons */}
+        <List>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                <AccountBalanceWalletIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {/* Analysis Icons */}
+        <List>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                <QueryStatsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {/* Events Icons */}
+        <List>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                <InsertInvitationIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {/* About Icons */}
         <List>
           <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/about')}>
             <ListItemButton
@@ -153,7 +224,6 @@ export const SideNav = () => {
           </ListItem>
         </List>
       </Drawer>
-
     </Box>
   );
 }

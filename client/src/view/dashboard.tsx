@@ -1,7 +1,7 @@
 import React from "react";
-import Box from '@mui/material/Box';
-import { Typography } from "@mui/material";
-import { SideNav } from "../../component/navigation/sideNav";
+import { Box } from "@mui/material";
+
+import { SideNav } from "../component/navigation/sideNav";
 
 export const Dashboard = () => {
     return (
