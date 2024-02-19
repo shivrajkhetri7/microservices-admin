@@ -17,7 +17,7 @@
     "MICRO",
     "ADMIN"
   ],
-  "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav",
+  "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav | Nikhilesh Karnala | Venkata Subha Ashish",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",

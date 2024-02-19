@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav | Nikhilesh Karnala | Venkata Subha Ashish",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
