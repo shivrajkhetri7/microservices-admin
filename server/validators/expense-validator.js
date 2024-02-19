@@ -1,4 +1,4 @@
-const Joi = require(Joi);
+const Joi = require('joi');
 
 const expenseValidor = async (validateDoc) => {
     //? this the schema for validation for document

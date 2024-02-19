@@ -4,19 +4,19 @@ const eventSchema = new mongoose.Schema(
     {
         userId: {
             type: Number,
-            required: true
+            // required: true
         },
         eventName: {
             type: String,
-            required: true
+            // required: true
         },
         eventDate: {
             type: String,
-            required: true
+            // required: true
         },
         amount: {
             type: Number,
-            required: true
+            // required: true
         }
     },
     { timestamps: true },
