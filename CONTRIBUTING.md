@@ -23,4 +23,5 @@
    - FrontEnd : singIn Page Desing
      
  # ashish kadali
-   - 
+   - Backend  : send Email 
+   - FrontEnd : Email Page design
