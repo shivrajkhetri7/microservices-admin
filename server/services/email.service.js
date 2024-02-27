@@ -1,5 +1,5 @@
 const nodemail= require("nodemailer");
-const constants =  require("../../utils/constants");
+const constants =  require("../utils/constants");
 
 /**
  * @function sendEmailNotification

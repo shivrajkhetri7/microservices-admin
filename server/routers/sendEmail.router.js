@@ -1,5 +1,5 @@
 const router=  require("express").Router()
-const {sendEmailNotification} = require("../controllers/email/emailcontroller");
+const {sendEmailNotification} = require("../services/email.service");
 
 router.post("/sendEmail", sendEmailNotification)
 
