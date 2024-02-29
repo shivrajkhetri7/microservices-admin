@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.contactus-input{
+  width: 100% !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

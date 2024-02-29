@@ -11,14 +11,11 @@ function Team() {
   return (
     <Box component="section" py={6} sx={{
       "width": "100%",
-      "height": "40rem",
-      "max-height": " 40rem",
       "opacity": 1,
       "background": "rgb(248, 249, 250)",
       "color": "rgb(52, 71, 103)",
       "border-radius": "0.75rem",
-      "box-shadow": "none",
-      "overflow-x": "scroll"
+      "box-shadow": "none"
     }}>
       <Container>
         <Grid container item flexDirection="column" xs={12} lg={7} mb={6}>
