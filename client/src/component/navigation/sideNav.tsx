@@ -132,7 +132,7 @@ export const SideNav = () => {
         </List>
         {/* Expense Icons */}
         <List>
-          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/expense')}>
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -149,13 +149,13 @@ export const SideNav = () => {
               >
                 <AccountBalanceWalletIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Expense" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         </List>
         {/* Analysis Icons */}
         <List>
-          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/analysis')}>
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -172,13 +172,13 @@ export const SideNav = () => {
               >
                 <QueryStatsIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Analytics" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         </List>
         {/* Events Icons */}
         <List>
-          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/event')}>
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -195,7 +195,7 @@ export const SideNav = () => {
               >
                 <InsertInvitationIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Event" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         </List>
