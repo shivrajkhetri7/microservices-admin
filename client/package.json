@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav | Nikhilesh Karnala | Venkata Subha Ashish",
-  "proxy": "http://localhost:8000/",
+  "proxy": "https://microservices-admin.onrender.com/",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -18,6 +18,7 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "axios": "^1.6.7",
+    "http-proxy-middleware": "^2.0.6",
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-big-calendar": "^1.11.0",
