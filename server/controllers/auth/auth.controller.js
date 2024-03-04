@@ -17,13 +17,15 @@ const signUpController = catchAsyncError(async (req, res) => {
       message: `${constants.MESSAGES.USERS.EMAIL_ALREADY_EXISTS}  :${payload?.email}`,
     });
   }
+
   const validatePayload = {
-    firstname: payload?.firstname,
-    lastname: payload?.lastname,
+    firstname: payload?.firstName,
+    lastname: payload?.lastName,
     email: payload?.email,
-    phone: payload?.phone,
+    phone: payload?.phone || 8888888888,
     userId: userId,
   };
+
   // Validate the document
   await signUpValidator(validatePayload);
 

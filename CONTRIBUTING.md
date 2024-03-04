@@ -6,6 +6,9 @@
    - Backend : Expense Schema Desing 
    - Backend : Validated Expense Payload / Validator 
    - Backend : Add Expense Route
+   - FrontEnd : singUp Page Desing
+   - FrontEnd : singIn Page Desing
+   - FrontEnd : Forget Page Desing
      
  # coderxplr
    - Backend : Database Validation
@@ -19,8 +22,7 @@
    - FrontEnd : Reusable Cards IMP
      
  # IAMPAVANJ
-   - FrontEnd : singUp Page Desing
-   - FrontEnd : singIn Page Desing
+
      
  # ashish kadali
    - Backend  : send Email 
