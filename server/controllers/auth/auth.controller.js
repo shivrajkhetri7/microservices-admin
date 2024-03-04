@@ -82,6 +82,6 @@ const signInController = catchAsyncError(async (req, res) => {
 });
 
 module.exports = {
-  signUpController,
-  signInController,
+  signUpController :signUpController,
+  signInController: signInController,
 };
