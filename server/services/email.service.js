@@ -40,4 +40,6 @@ const sendEmailNotification = async(req,res) =>{
 
 }
 
-module.exports = sendEmailNotification
+module.exports = {
+    sendEmailNotification
+}
