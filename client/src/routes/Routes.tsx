@@ -8,6 +8,7 @@ import { Expense } from "../view/expense";
 import { Events } from "../view/event";
 import { Analysis} from "../view/analysis";
 import { About } from "../view/about";
+import {PageNotFound} from "../view/pageNotFound";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     {
         path:'/about',
         element:<About/>
+    },
+    {
+        path:'*',
+        element:<PageNotFound/>
     },
 ])
 
