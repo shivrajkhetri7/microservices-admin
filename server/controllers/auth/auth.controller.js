@@ -6,6 +6,7 @@ const { signUpValidator } = require("../../validators/signup-validator");
 const userSchema = require("../../schema/userSchema");
 const catchAsyncError = require("../../middlewares/catchAsyncErrors");
 const { encode, decode } = require("../../services/auth.service");
+const sendEmail = require("../../services/email.service");
 
 const generateUserId = async () => {
   const uniqueId = uuidv4();
@@ -19,7 +20,7 @@ const signUpController = catchAsyncError(async (req, res) => {
   if (user) {
     return res.status(constants.CODES.BAD_REQUEST).json({
       status: false,
-      message: `${constants.MESSAGES.USERS.EMAIL_ALREADY_EXISTS}  :${payload?.email}`,
+      message: `${constants.MESSAGES.USERS.EMAIL_ALREADY_EXISTS} ${payload?.email}`,
     });
   }
   const validatePayload = {
@@ -40,6 +41,14 @@ const signUpController = catchAsyncError(async (req, res) => {
   validatePayload.password = hashedPassword;
 
   const response = await userSchema.create(validatePayload);
+  console.log("response: ", response);
+  if (response?._id) {
+    await sendEmail({
+      to: payload?.email,
+      subject: "Signup Successfull!!!!",
+      text: `Hey ${payload?.firstname} ${payload?.lastname} Welcome to BACHAT! Congratulations you have successfully signedup. `,
+    });
+  }
   response.password = null;
   return res.status(constants.CODES.SUCCESS).json({
     success: true,
