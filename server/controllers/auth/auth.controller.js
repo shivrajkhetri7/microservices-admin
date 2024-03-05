@@ -7,11 +7,7 @@ const userSchema = require("../../schema/userSchema");
 const catchAsyncError = require("../../middlewares/catchAsyncErrors");
 const { encode, decode } = require("../../services/auth.service");
 const sendEmail = require("../../services/email.service");
-
-const generateUserId = async () => {
-  const uniqueId = uuidv4();
-  return uniqueId;
-};
+const { generateUserId } = require("../../utils/utils");
 
 const signUpController = catchAsyncError(async (req, res) => {
   const userId = await generateUserId();

@@ -2,7 +2,14 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "author": "shivraj khetri | Mohammad Awaiz | Pavan Choudhari | Pavan Jadhav | Nikhilesh Karnala | Venkata Subha Ashish",
+  "proxy": "https://microservices-admin.onrender.com/",
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
+    "@mui/styled-engine": "^5.15.9",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,16 +17,24 @@
     "@types/node": "^16.18.80",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "axios": "^1.6.7",
+    "http-proxy-middleware": "^2.0.6",
+    "moment": "^2.30.1",
     "react": "^18.2.0",
+    "react-big-calendar": "^1.11.0",
     "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.10",
+    "react-hot-toast": "^2.4.1",
+    "react-popup": "^0.11.2",
     "react-router-dom": "^6.22.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
+    "reactjs-popup": "^2.0.6",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-big-calendar": "^1.8.8",
     "prettier": "3.2.5"
   }
 }

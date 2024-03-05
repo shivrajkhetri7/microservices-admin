@@ -8,12 +8,12 @@ const { verifyToken } = require("../middlewares/permissions");
 /**
  *  *** User signup router
  */
-router.post("/signup", signUpController);
+router.post("/signup", function(req,res){signUpController(req,res)});
 
 /**
  *  *** User Login Router
  */
-router.post("/signin", signInController);
+router.post("/signin", function(req,res){signInController(req,res)});
 
 // TODO
 
