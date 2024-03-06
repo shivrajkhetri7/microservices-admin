@@ -19,6 +19,7 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
+import InfoIcon from '@mui/icons-material/Info';
 
 const drawerWidth = 240;
 
@@ -205,9 +206,33 @@ export const SideNav = () => {
                   justifyContent: 'center',
                 }}
               >
-                <PermIdentityIcon />
+                <InfoIcon />
               </ListItemIcon>
               <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {/* Sign Out Icons */}
+          <List>
+          <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/signin')}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                <PermIdentityIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sign Out" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
         </List>

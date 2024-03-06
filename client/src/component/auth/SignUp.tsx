@@ -19,7 +19,7 @@ export default function SignUp() {
     }
 
     //TODO callign the auth | sign up api
-    await axios.post('/api/auth/signup',
+    await axios.post('https://microservices-admin.onrender.com/api/auth/signup',
       body,
      {headers : {'Content-Type': 'application/json'} }
     ).then((response): any => {

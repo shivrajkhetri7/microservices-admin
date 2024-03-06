@@ -8,15 +8,21 @@ import { Expense } from "../view/expense";
 import { Events } from "../view/event";
 import { Analysis} from "../view/analysis";
 import { About } from "../view/about";
+import {PageNotFound} from "../view/pageNotFound";
+import ForgotPassword from "../component/auth/ForgotPassword";
 
 const router = createBrowserRouter([
     {
-        path:'/signIn',
+        path:'/signin',
         element:<SignIn/>
     },
     {
         path:'/signup',
         element:<SignUp/>
+    },
+    {
+        path:'/resetpassword',
+        element:<ForgotPassword/>
     },
     {
         path:'/',
@@ -37,6 +43,10 @@ const router = createBrowserRouter([
     {
         path:'/about',
         element:<About/>
+    },
+    {
+        path:'*',
+        element:<PageNotFound/>
     },
 ])
 
