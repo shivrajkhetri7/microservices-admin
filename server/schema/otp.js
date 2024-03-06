@@ -7,7 +7,7 @@ const Otps = mongoose.Schema(
       required: true,
     },
     otp: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

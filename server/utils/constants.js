@@ -25,6 +25,7 @@ module.exports = {
       FAILED_TO_CREATE_SIGNUP: "ooops, Signup failed.",
       OTP_VERIFIED: "Valid Otp.",
       OTP_EXPIRED: "ohhh, your Otp has expired.",
+      FAILED_TO_CREATE_OTP: "ohhh, failed to create otp.",
       OTP_INCORRECT:
         "ooops, your otp is Incorrect please try again with correct one.",
       EMAIL_SENT_SUCCESS: `OTP has been successfully sent to the email address: `,
