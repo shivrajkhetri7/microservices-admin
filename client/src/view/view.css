@@ -32,3 +32,15 @@
     background: #ECEFF1;
     /* background: linear-gradient(158deg, rgba(224,224,224) 0%); */
 }
+
+.prdtDetails{
+    font-weight: 600;
+}
+
+.accordian{
+    padding-top: 10px;
+}
+
+/* .barGraph{
+    padding-top: 70px;
+} */
