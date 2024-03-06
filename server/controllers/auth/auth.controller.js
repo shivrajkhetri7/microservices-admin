@@ -58,14 +58,14 @@ const signInController = catchAsyncError(async (req, res) => {
 
   const response = await userSchema.findOne({ email });
   if (!response) {
-    res.status(constants.CODES.NOT_FOUND).json({
+    return res.status(constants.CODES.NOT_FOUND).json({
       status: false,
       message: `${constants.MESSAGES.USERS.NOT_FOUND}:${email}`,
     });
   }
 
   if (!bcrypt.compareSync(password, response?.password)) {
-    res.status(constants.CODES.CONFLICT).json({
+    return res.status(constants.CODES.CONFLICT).json({
       status: false,
       message: `${constants.MESSAGES.AUTH.INCORRECT_PASSWORD}:${password}`,
     });
