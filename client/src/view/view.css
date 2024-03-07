@@ -1,0 +1,46 @@
+.total-income {
+    padding: 10px 10px 10px 10px;
+}
+
+.incomeAmount {
+    font-weight: 600;
+    color: white;
+}
+
+.incomeAmtTitle {
+    font-size: 14px;
+    color: white;
+}
+
+.amountIcon {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.totalEarningGradient {
+    background: rgb(40, 34, 70) !important;
+    background: linear-gradient(158deg, rgba(40,34,71,1) 0%, rgba(30,47,141,1) 100%) !important;
+}
+
+.totalOrderGradient {
+    background: rgb(53,138,148) !important;
+    background: linear-gradient(158deg, rgba(53,138,148,1) 0%, rgba(91,180,96,1) 100%) !important;
+}
+
+.bgColor {
+    /* height: 100vh; */
+    background: #ECEFF1;
+    /* background: linear-gradient(158deg, rgba(224,224,224) 0%); */
+}
+
+.prdtDetails{
+    font-weight: 600;
+}
+
+.accordian{
+    padding-top: 10px;
+}
+
+/* .barGraph{
+    padding-top: 70px;
+} */
