@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require('cors')
 dotenv.config();
 const bodyParser = require("body-parser");
 const router = require("./routers/index");
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 // This is test api to testing the api
 app.get("/", (req, res) => {
