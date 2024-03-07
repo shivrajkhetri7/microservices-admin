@@ -1,45 +1,33 @@
-const nodemail= require("nodemailer");
-const constants =  require("../utils/constants");
+const nodemailer = require("nodemailer");
 
-/**
- * @function sendEmailNotification
- * @description it is to send email to single users
- */
+function sendEmail(userData) {
+  return new Promise((resolve, reject) => {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD,
+      },
+    });
 
-const sendEmailNotification = async(req,res) =>{
-    const { form, to , sub, text } = req.body
+    const mailOptions = {
+      from: process.env.SMTP_EMAIL,
+      to: userData.to,
+      subject: userData.subject,
+      text: userData.text,
+    };
 
-    const transporter = nodemail.createTransport({
-        service: 'gmail',
-        auth: {
-        //   type: 'OAuth2',
-        //   user: process.env.MAIL_USERNAME,
-        //   pass: process.env.MAIL_PASSWORD,
-        //   clientId: process.env.OAUTH_CLIENTID,
-        //   clientSecret: process.env.OAUTH_CLIENT_SECRET,
-        }        
-    })
-
-    const mail_data= {
-        form, to , sub, text 
-    }
-
-    transporter.sendMail(mail_data,(error,data)=>{
-        if(error){
-            return res.status(constants.CODES.BAD_REQUEST).JSON({
-                status: false,
-                message: `${constants.MESSAGES.GENERAL.SOMETHING_WENT_WRONG}`,
-            })
-        }else{
-            return res.status(constants.CODES.SUCCESS).JSON({
-                status: true,
-                message: "email successfully sent"
-            })
-        }
-    })
-
+    // Send the email
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log("Error: ", error);
+        reject(error);
+      } else {
+        console.log("mailer response: ", info.response);
+        resolve(info.response);
+      }
+    });
+  });
 }
 
-module.exports = {
-    sendEmailNotification
-}
+module.exports = sendEmail;

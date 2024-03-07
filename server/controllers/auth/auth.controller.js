@@ -1,10 +1,12 @@
 const bcrypt = require("bcrypt");
-const constants = require("../../utils/constants");
 
-const { signUpValidator } = require("../../validators/signup-validator");
 const userSchema = require("../../schema/userSchema");
+
+const constants = require("../../utils/constants");
+const sendEmail = require("../../services/email.service");
 const catchAsyncError = require("../../middlewares/catchAsyncErrors");
-const { encode, decode } = require("../../services/auth.service");
+const { signUpValidator } = require("../../validators/signup-validator");
+const { encode } = require("../../services/auth.service");
 const { generateUserId } = require("../../utils/utils");
 
 const signUpController = catchAsyncError(async (req, res) => {
@@ -14,18 +16,16 @@ const signUpController = catchAsyncError(async (req, res) => {
   if (user) {
     return res.status(constants.CODES.BAD_REQUEST).json({
       status: false,
-      message: `${constants.MESSAGES.USERS.EMAIL_ALREADY_EXISTS}  :${payload?.email}`,
+      message: `${constants.MESSAGES.USERS.EMAIL_ALREADY_EXISTS} ${payload?.email}`,
     });
   }
-
   const validatePayload = {
-    firstname: payload?.firstName,
-    lastname: payload?.lastName,
+    firstname: payload?.firstname,
+    lastname: payload?.lastname,
     email: payload?.email,
-    phone: payload?.phone || 8888888888,
+    phone: payload?.phone,
     userId: userId,
   };
-
   // Validate the document
   await signUpValidator(validatePayload);
 
@@ -37,6 +37,14 @@ const signUpController = catchAsyncError(async (req, res) => {
   validatePayload.password = hashedPassword;
 
   const response = await userSchema.create(validatePayload);
+  // console.log("response: ", response);
+  if (response?._id) {
+    await sendEmail({
+      to: payload?.email,
+      subject: "Signup Successfull!!!!",
+      text: `Hey ${payload?.firstname} ${payload?.lastname} Welcome to BACHAT! Congratulations you have successfully signedup. `,
+    });
+  }
   response.password = null;
   return res.status(constants.CODES.SUCCESS).json({
     success: true,
@@ -50,14 +58,14 @@ const signInController = catchAsyncError(async (req, res) => {
 
   const response = await userSchema.findOne({ email });
   if (!response) {
-    res.status(constants.CODES.NOT_FOUND).json({
+    return res.status(constants.CODES.NOT_FOUND).json({
       status: false,
       message: `${constants.MESSAGES.USERS.NOT_FOUND}:${email}`,
     });
   }
 
   if (!bcrypt.compareSync(password, response?.password)) {
-    res.status(constants.CODES.CONFLICT).json({
+    return res.status(constants.CODES.CONFLICT).json({
       status: false,
       message: `${constants.MESSAGES.AUTH.INCORRECT_PASSWORD}:${password}`,
     });
@@ -82,6 +90,6 @@ const signInController = catchAsyncError(async (req, res) => {
 });
 
 module.exports = {
-  signUpController :signUpController,
-  signInController: signInController,
+  signUpController,
+  signInController,
 };
